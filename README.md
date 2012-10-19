@@ -1,9 +1,23 @@
 gtat-stats-fs
 =============
 
+Version: 1.0
+
 Filterscript to upload stats to http://gtat.org
 
 ## How to install
+
+1. Put the `gtat-stats-fs.amx` in your `filterscripts` folder.
+2. add gtat-stats-fs to your `filterscripts=` line in the `server.cfg`
+
+    filterscripts=gtat-stats-fs
+
+3. Create a `scriptfiles/gtat-stats-fs.ini` with the contents:
+
+    host=api.gtat.org
+    key=testkey
+
+`testkey` should be the key, given by dracoblue from <http://gtat.org>
 
 ## Compile on samp scripts on Linux
 
