@@ -39,17 +39,29 @@ public GTAT_STATS_FS_LOGIN_callback(playerid, response_code, response[])
 
     new gtat_id;
     new gang_tag[MAX_STRING];
+    new gang_id;
+    new player_name[MAX_STRING];
     new index;
+    new player_color_string[MAX_STRING];
     gtat_id = strval(strtok(response, index, '|'));
     gang_tag = strtok(response, index, '|');
+    gang_id = strval(strtok(response, index, '|'));
+    player_name = strtok(response, index, '|');
+    player_color_string = strtok(response, index, '|');
+
+    format(player_color_string, sizeof(player_color_string), "%sFF", player_color_string);
+    SetPlayerColor(playerid, HexToInt(player_color_string));
 
     GTATID_BY_PLAYER[playerid] = gtat_id;
 
 //    printf("player id: %d", playerid);
-//    printf("gtat id: %d", gtat_id);
+//    printf("gtat player id: %d", gtat_id);
+//    printf("player name: %s", player_name);
+//    printf("gtat gang id: %d", gang_id);
 //    printf("gang tag: %s", gang_tag);
 
     SendClientMessage(playerid, 0x44FFFFAA, "[GTAT] Login successful! Welcome back!");
+    SetPlayerName(playerid, player_name);
 }
 
 public OnFilterScriptInit()

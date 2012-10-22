@@ -1,7 +1,8 @@
 gtat-stats-fs
 =============
 
-Version: 1.0
+Date: 2012/10/22
+Version: 1.1
 
 Filterscript to upload stats to http://gtat.org
 
@@ -20,7 +21,7 @@ Create a `scriptfiles/gtat-stats-fs.ini` with the contents:
 
 `testkey` should be the key, given by dracoblue from <http://gtat.org>
 
-## Compile on samp scripts on Linux
+## Compile samp scripts on Linux
 
 ### Install Wine
 
@@ -47,3 +48,14 @@ Create a `scriptfiles/gtat-stats-fs.ini` with the contents:
 Expected output:    
 
     Pawn compiler 3.2.3664          Copyright (c) 1997-2006, ITB CompuPhase
+
+
+## Changelog
+
+- 1.1 (2012/10/22)
+    - added clantag support
+    - added `gang_id` support
+    - added `player color` support
+- 1.0 (2012/10/19)
+    - Initial version
+
