@@ -6,7 +6,7 @@
 
 #define dcmd(%1,%2,%3) if ((strcmp((%3)[1], #%1, true, (%2)) == 0) && ((((%3)[(%2) + 1] == 0) && (dcmd_%1(playerid, "")))||(((%3)[(%2) + 1] == 32) && (dcmd_%1(playerid, (%3)[(%2) + 2]))))) return 1
 
-#define GTAT_API_VERSION "1.0"
+#define GTAT_API_VERSION "1.1"
 
 new GTAT_API_HOST[255];
 new GTAT_API_KEY[255];
